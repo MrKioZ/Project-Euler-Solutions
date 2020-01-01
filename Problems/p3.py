@@ -11,5 +11,5 @@ def prime_factors(n):
     return factors
 
 
-pfs = prime_factors(1000)
+pfs = prime_factors(600851475143)
 largest_prime_factor = max(pfs) # The largest element in the prime factor list
