@@ -82,18 +82,12 @@ def SieveOfEratosthenes(n):
                 prime[i] = False
         p += 1
 
-    # Print all prime numbers
+    # Returns all Primes
     for p in range(2, n):
         if prime[p]:
-            print p,
-
+            yield p
 
 if __name__=='__main__':
 
-    limit = 20
-    SieveOfAtkin(limit)
-
-    n = 30
-    print("Following are the prime numbers smaller")
-    print("than or equal to", n)
-    SieveOfEratosthenes(n)
+    n = (10**6)*2 # 2 Million
+    print(sum(i for i in SieveOfEratosthenes(n))) #Prints the Sum of Prime numbers that are below 2 million
